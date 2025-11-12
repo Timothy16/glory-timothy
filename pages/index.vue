@@ -38,8 +38,8 @@ const SeoHead = defineComponent({
         { property: 'og:title', content: 'Glory and Timothy | Our Love Story & Wedding Celebration' },
         { property: 'og:description', content: 'From the first spark to "Yes!" – relive our journey and be part of our next chapter. Gift us your love and blessings.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://temiandtee.com' }, // Update with actual domain
-        { property: 'og:image', content: 'https://temiandtee.com/favicon.png' },
+        { property: 'og:url', content: 'https://glory-timothy.vercel.app' }, // Update with actual domain
+        { property: 'og:image', content: 'https://glory-timothy.vercel.app/favicon.png' },
         { property: 'og:image:alt', content: 'Glory and Timothy smiling together during golden hour engagement photoshoot in Lagos, Nigeria' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
@@ -52,11 +52,11 @@ const SeoHead = defineComponent({
         { name: 'twitter:creator', content: '@iamteemotee' },
         { name: 'twitter:title', content: 'Glory and Timothy | Our Love Story & Wedding Gift Registry' },
         { name: 'twitter:description', content: 'Celebrate with us! Explore our proposal, memories, and help build our future home with your gift.' },
-        { name: 'twitter:image', content: 'https://temiandtee.com/favicon.png' },
+        { name: 'twitter:image', content: 'https://glory-timothy.vercel.app/favicon.png' },
         { name: 'twitter:image:alt', content: 'Glory and Timothy holding hands at sunset, Lagos skyline in background – Nigerian couple engagement' },
 
         // Canonical URL
-        { rel: 'canonical', href: 'https://temiandtee.com' },
+        { rel: 'canonical', href: 'https://glory-timothy.vercel.app/' },
 
         // Additional Structured Data Hint (JSON-LD can be added separately if needed)
         { name: 'geo.region', content: 'NG' },
