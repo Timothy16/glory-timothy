@@ -19,6 +19,39 @@
       loop
       playsinline
     ></audio>
+
+    <!-- Floating Play/Pause Button (Coffee Brown) -->
+    <transition name="fade">
+      <button
+        v-if="showMusicControls"
+        @click="toggleMusic"
+        :class="[
+          'fixed bottom-6 right-6 z-40 flex items-center justify-center w-14 h-14 bg-[#3C2A21]/90 backdrop-blur-md rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 group border border-[#D4A574]/20',
+          { 'animate-pulse-ring': isPlaying }
+        ]"
+        aria-label="Toggle background music"
+      >
+        <!-- Play Icon -->
+        <svg
+          v-if="!isPlaying"
+          class="w-6 h-6 text-[#C9A96E] group-hover:text-[#D4A574] transition-colors"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M8 5v14l11-7L8 5z" />
+        </svg>
+
+        <!-- Pause Icon -->
+        <svg
+          v-else
+          class="w-6 h-6 text-[#C9A96E] group-hover:text-[#D4A574] transition-colors"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+        </svg>
+      </button>
+    </transition>
   </div>
 </template>
 
@@ -34,7 +67,7 @@ import Gift from '~/components/Gift.vue'
 import Footer from '~/components/Footer.vue'
 import WelcomeModal from '~/components/WelcomeModal.vue'
 
-// SEO Head Component (using Unhead for Nuxt 3+)
+// SEO Head Component
 const SeoHead = defineComponent({
   name: 'SeoHead',
   setup() {
@@ -95,17 +128,20 @@ const SeoHead = defineComponent({
   render: () => null
 })
 
-// Audio control
+// Audio & UI State
 const backgroundMusic = ref(null)
+const isPlaying = ref(false)
+const showMusicControls = ref(false)
 
 const handleStart = () => {
+  showMusicControls.value = true // Show button
   if (backgroundMusic.value) {
     backgroundMusic.value.volume = 0
     backgroundMusic.value.play().catch((err) => {
       console.warn('Music play failed:', err)
     })
 
-    // Smooth fade-in for romantic touch
+    // Smooth fade-in
     let vol = 0
     const fadeIn = setInterval(() => {
       if (vol < 0.7) {
@@ -113,14 +149,54 @@ const handleStart = () => {
         backgroundMusic.value.volume = vol
       } else {
         clearInterval(fadeIn)
+        isPlaying.value = true // Music is now playing
       }
     }, 200)
   }
+}
+
+const toggleMusic = () => {
+  if (!backgroundMusic.value) return
+
+  if (isPlaying.value) {
+    backgroundMusic.value.pause()
+  } else {
+    backgroundMusic.value.play().catch(() => {})
+  }
+  isPlaying.value = !isPlaying.value
 }
 </script>
 
 <style scoped>
 audio {
   display: none;
+}
+
+/* Button fade-in */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Pulse animation when music is playing */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 165, 116, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(212, 165, 116, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 165, 116, 0);
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse 2s infinite;
 }
 </style>
