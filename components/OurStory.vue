@@ -129,9 +129,19 @@
         :class="{ 'opacity-0 translate-y-10': !quoteVisible, 'opacity-100 translate-y-0': quoteVisible }"
       >
         <p class="text-2xl sm:text-3xl md:text-4xl font-light text-[#3C2A21] italic leading-relaxed">
-          "Our love story is not measured by the calendar's count of days, months, or years.
-          <span class="text-[#D4A574] font-medium">It is measured by the profound depth of devotion we intentionally choose and cherish, together, every single day.</span>"
-        </p>
+        “He came softly, but his sincerity echoed loudly in my spirit.”
+        <span class="block mt-3 text-base sm:text-lg not-italic font-medium text-[#3C2A21]">
+          — Glory
+        </span>
+      </p>
+
+      <p class="mt-10 text-2xl sm:text-3xl md:text-4xl font-light text-[#D4A574] italic leading-relaxed">
+        “She listened with her heart, and her presence answered me completely.”
+        <span class="block mt-3 text-base sm:text-lg not-italic font-medium text-[#D4A574]">
+          — Tim
+        </span>
+      </p>
+
       </div>
     </div>
   </section>

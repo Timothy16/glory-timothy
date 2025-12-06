@@ -98,11 +98,11 @@
           
           <span class="text-white/70 text-sm sm:text-base">
             Built and designed with 
-            <span class="text-[#C9A96E]">love</span> by 
+            <span class="text-[#C9A96E]">love</span> by
             <a 
               href="https://x.com/iamteemotee" 
               target="_blank" 
-              class="text-[#D4A574] hover:text-[#C9A96E] font-semibold transition-colors duration-300 hover:underline ml-1"
+              class="text-[#D4A574] hover:text-[#C9A96E] font-semibold transition-colors duration-300 hover:underline"
             >
               Timothy
             </a>

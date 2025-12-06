@@ -17,12 +17,14 @@
           <img
             :src="mobileImages[index].url"
             :alt="mobileImages[index].alt"
+            :loading="index === 0 ? 'eager' : 'lazy'"
             class="md:hidden w-full h-full object-cover object-top"
           />
           <!-- Desktop Images -->
           <img
             :src="desktopImages[index].url"
             :alt="desktopImages[index].alt"
+            :loading="index === 0 ? 'eager' : 'lazy'"
             class="hidden md:block w-full h-full object-cover object-top"
           />
           <!-- Gradient Overlay -->
@@ -122,61 +124,61 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const currentSlide = ref(0)
 let intervalId = null
 
-// Desktop images
+// Desktop images - Optimized with Cloudinary transformations
 const desktopImages = [
   {
     id: 1,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765058600/GT_001_web_hkpuvk.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1920,q_auto:good,f_auto/v1765058600/GT_001_web_hkpuvk.jpg',
     alt: 'Wedding celebration moment 1'
   },
   {
     id: 2,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765054925/GT_013__web_fumxqo.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1920,q_auto:good,f_auto/v1765054925/GT_013__web_fumxqo.jpg',
     alt: 'Wedding celebration moment 2'
   },
   {
     id: 3,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765058605/GT_004_Web_kxzokf.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1920,q_auto:good,f_auto/v1765058605/GT_004_Web_kxzokf.jpg',
     alt: 'Wedding celebration moment 3'
   },
   {
     id: 4,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765058600/GT_007_web_py6szk.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1920,q_auto:good,f_auto/v1765058600/GT_007_web_py6szk.jpg',
     alt: 'Wedding celebration moment 4'
   },
   {
     id: 5,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765061020/GT_014_web_2_iyznar.jpg',
-    alt: 'Wedding celebration moment 4'
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1920,q_auto:good,f_auto/v1765061020/GT_014_web_2_iyznar.jpg',
+    alt: 'Wedding celebration moment 5'
   }
 ]
 
-// Mobile images
+// Mobile images - Optimized with Cloudinary transformations
 const mobileImages = [
   {
     id: 1,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765052197/GT_001_dw7j27.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_768,q_auto:good,f_auto/v1765052197/GT_001_dw7j27.jpg',
     alt: 'Wedding celebration moment 1'
   },
   {
     id: 2,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765059596/GT_013_Graded_jr0mzt.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_768,q_auto:good,f_auto/v1765059596/GT_013_Graded_jr0mzt.jpg',
     alt: 'Wedding celebration moment 2'
   },
   {
     id: 3,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765061229/GT_004_Graded_fq65dw.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_768,q_auto:good,f_auto/v1765061229/GT_004_Graded_fq65dw.jpg',
     alt: 'Wedding celebration moment 3'
   },
   {
     id: 4,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765059670/GT_007_Graded_izvnx5.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_768,q_auto:good,f_auto/v1765059670/GT_007_Graded_izvnx5.jpg',
     alt: 'Wedding celebration moment 4'
   },
   {
     id: 5,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765061019/GT_014_Graded_2_ucgbv2.jpg',
-    alt: 'Wedding celebration moment 4'
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_768,q_auto:good,f_auto/v1765061019/GT_014_Graded_2_ucgbv2.jpg',
+    alt: 'Wedding celebration moment 5'
   }
 ]
 
