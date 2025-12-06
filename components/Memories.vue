@@ -97,7 +97,7 @@
             <div class="flex items-center justify-center md:justify-start gap-3">
               <div class="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-[#D4A574]"></div>
               <p class="text-lg sm:text-xl md:text-2xl font-medium text-[#D4A574]">
-                February 14, 2020 → Forever
+                March 19, 2023 → Forever
               </p>
               <div class="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-[#C9A96E]"></div>
             </div>
@@ -106,7 +106,7 @@
           <!-- Stats -->
           <div class="flex gap-6 sm:gap-8">
             <div class="text-center">
-              <p class="text-3xl sm:text-4xl font-bold text-white mb-1">5+</p>
+              <p class="text-3xl sm:text-4xl font-bold text-white mb-1">2+</p>
               <p class="text-xs sm:text-sm text-[#D4A574] tracking-wider uppercase">Years</p>
             </div>
             <div class="w-px h-12 sm:h-14 bg-[#D4A574]/30"></div>

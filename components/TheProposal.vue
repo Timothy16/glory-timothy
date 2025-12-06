@@ -53,7 +53,7 @@
                   v-show="currentSlide === index"
                   class="absolute inset-0 w-full h-full"
                 >
-                  <img
+                  <NuxtImg
                     :src="image.url"
                     :alt="image.alt"
                     class="w-full h-full object-cover"
@@ -125,18 +125,19 @@
           <!-- Story Text -->
           <div class="space-y-6">
             <p class="text-base sm:text-lg lg:text-xl leading-relaxed text-[#3C2A21]/80">
-              Under a sky painted with stars, with hearts full of love and dreams of tomorrow, the question was asked and answered with joyful tears and an enthusiastic "Yes!"
+              Hand in hand, heart to heart.
             </p>
             
             <div class="relative pl-6 border-l-2 border-[#D4A574]/30">
               <p class="text-base sm:text-lg lg:text-xl leading-relaxed text-[#3C2A21]/80">
-                It was a moment we'll cherish forever—the beginning of our next chapter, surrounded by love and the promise of a beautiful future together.
+                One look, one smile, one yes. That’s all it took.
+
               </p>
             </div>
 
             <div class="bg-gradient-to-br from-[#D4A574]/10 to-[#C9A96E]/10 rounded-2xl p-6 sm:p-8 border border-[#D4A574]/20">
               <p class="text-lg sm:text-xl font-medium text-[#3C2A21] italic leading-relaxed">
-                "In that perfect moment, time stood still, and our hearts spoke the language of forever."
+                "It felt like the world softened just for us, marking the start of a future we have long dreamed of and are now ready to create together."
               </p>
             </div>
           </div>
@@ -144,7 +145,7 @@
           <!-- CTA Button -->
           <div class="pt-4">
             <a
-              href="https://unsplash.com/collections/proposal"
+              href="https://photos.google.com/share/AF1QipOmfSJ96L0dNpcBfl7ZpP0OzJm8YYhQfjovVwe8qm-CRXYGJgefclD6gxMROum47A?key=aGhSaEc2V01iUEE1REtZS3BNY0ptVEQ4VngzMlFn"
               target="_blank"
               class="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#D4A574] to-[#C9A96E] text-white text-base sm:text-lg font-medium tracking-wider rounded-full transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-[#C9A96E]/50 hover:scale-105 active:scale-95"
             >
@@ -178,22 +179,37 @@ let intervalId = null
 const proposalImages = [
   {
     id: 1,
-    url: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1920&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765050667/IMG_6012_bdisa9.jpg',
     alt: 'Proposal moment 1'
   },
   {
     id: 2,
-    url: 'https://images.unsplash.com/photo-1470428938184-3b96c79d856b?w=1920&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765051111/IMG_6047_lfskyd.jpg',
     alt: 'Proposal moment 2'
   },
   {
     id: 3,
-    url: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1920&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765051041/IMG_6024_fl0igh.jpg',
     alt: 'Proposal moment 3'
   },
   {
     id: 4,
-    url: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765051049/IMG_6152_dvpuvu.jpg',
+    alt: 'Proposal moment 4'
+  },
+  {
+    id: 5,
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765051035/IMG_6238_kuiopq.jpg',
+    alt: 'Proposal moment 4'
+  },
+  {
+    id: 6,
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765051045/IMG_5997_m89tgr.jpg',
+    alt: 'Proposal moment 4'
+  },
+  {
+    id: 7,
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765051035/IMG_6238_kuiopq.jpg',
     alt: 'Proposal moment 4'
   }
 ]

@@ -1,5 +1,5 @@
 <template>
-  <section class="relative h-screen w-full overflow-hidden">
+  <section class="relative h-screen w-full overflow-hidden mt-[72px] sm:mt-[84px]">
     <!-- Image Carousel -->
     <div class="absolute inset-0">
       <transition-group
@@ -13,10 +13,17 @@
           v-show="currentSlide === index"
           class="absolute inset-0 w-full h-full"
         >
+          <!-- Mobile Images -->
           <img
-            :src="image.url"
-            :alt="image.alt"
-            class="w-full h-full object-cover"
+            :src="mobileImages[index].url"
+            :alt="mobileImages[index].alt"
+            class="md:hidden w-full h-full object-cover object-top"
+          />
+          <!-- Desktop Images -->
+          <img
+            :src="desktopImages[index].url"
+            :alt="desktopImages[index].alt"
+            class="hidden md:block w-full h-full object-cover object-top"
           />
           <!-- Gradient Overlay -->
           <div class="absolute inset-0 bg-gradient-to-b from-[#3C2A21]/40 via-[#3C2A21]/50 to-[#3C2A21]/70"></div>
@@ -37,16 +44,16 @@
         <!-- Main Heading -->
         <div class="space-y-3 sm:space-y-4 animate-slide-up" style="animation-delay: 0.2s">
           <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight tracking-wide">
-            We're Getting
-          </h1>
-          <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-[#D4A574] to-[#C9A96E] bg-clip-text text-transparent leading-tight tracking-wide">
+            We Are Getting
+          
+          <span class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-[#D4A574] to-[#C9A96E] bg-clip-text text-transparent leading-tight tracking-wide">
             Married!
-          </h1>
+          </span></h1>
         </div>
 
         <!-- Subtitle -->
         <p class="text-lg sm:text-xl md:text-2xl text-white/90 font-light tracking-wide animate-fade-in" style="animation-delay: 0.4s">
-          Join us as we celebrate our love and begin our forever
+          Join us as we celebrate our love and step into forever.
         </p>
 
         <!-- Decorative Divider -->
@@ -61,20 +68,13 @@
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center animate-slide-up" style="animation-delay: 0.6s">
           <a
-            href="https://unsplash.com/collections/wedding"
+            href="https://drive.google.com/drive/folders/1zHp7wmcOp0oF_mb7E0FRIbkLLOskozhU"
             target="_blank"
-            class="group relative px-8 py-4 bg-gradient-to-r from-[#D4A574] to-[#C9A96E] text-white text-base sm:text-lg font-medium tracking-wider rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#C9A96E]/50 hover:scale-105 active:scale-95 w-full sm:w-auto"
+            class="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#D4A574] to-[#C9A96E] text-white text-sm sm:text-base md:text-lg font-medium tracking-wider rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#C9A96E]/50 hover:scale-105 active:scale-95 w-auto"
           >
             <span class="relative z-10">Download Pictures</span>
             <div class="absolute inset-0 bg-gradient-to-r from-[#C9A96E] to-[#D4A574] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </a>
-          
-          <button
-            @click="getDirections"
-            class="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white text-base sm:text-lg font-medium tracking-wider rounded-full border-2 border-white/30 transition-all duration-300 hover:bg-white hover:text-[#3C2A21] hover:border-white hover:shadow-2xl hover:scale-105 active:scale-95 w-full sm:w-auto"
-          >
-            Get Directions
-          </button>
         </div>
       </div>
 
@@ -122,29 +122,66 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const currentSlide = ref(0)
 let intervalId = null
 
-// Using Unsplash wedding images as placeholders
-const images = [
+// Desktop images
+const desktopImages = [
   {
     id: 1,
-    url: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765058600/GT_001_web_hkpuvk.jpg',
     alt: 'Wedding celebration moment 1'
   },
   {
     id: 2,
-    url: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1920&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765054925/GT_013__web_fumxqo.jpg',
     alt: 'Wedding celebration moment 2'
   },
   {
     id: 3,
-    url: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1920&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765058605/GT_004_Web_kxzokf.jpg',
     alt: 'Wedding celebration moment 3'
   },
   {
     id: 4,
-    url: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1920&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765058600/GT_007_web_py6szk.jpg',
+    alt: 'Wedding celebration moment 4'
+  },
+  {
+    id: 5,
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765061020/GT_014_web_2_iyznar.jpg',
     alt: 'Wedding celebration moment 4'
   }
 ]
+
+// Mobile images
+const mobileImages = [
+  {
+    id: 1,
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765052197/GT_001_dw7j27.jpg',
+    alt: 'Wedding celebration moment 1'
+  },
+  {
+    id: 2,
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765059596/GT_013_Graded_jr0mzt.jpg',
+    alt: 'Wedding celebration moment 2'
+  },
+  {
+    id: 3,
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765061229/GT_004_Graded_fq65dw.jpg',
+    alt: 'Wedding celebration moment 3'
+  },
+  {
+    id: 4,
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765059670/GT_007_Graded_izvnx5.jpg',
+    alt: 'Wedding celebration moment 4'
+  },
+  {
+    id: 5,
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765061019/GT_014_Graded_2_ucgbv2.jpg',
+    alt: 'Wedding celebration moment 4'
+  }
+]
+
+// Use desktop images for carousel indicators
+const images = desktopImages
 
 const goToSlide = (index) => {
   currentSlide.value = index
@@ -166,10 +203,6 @@ const startAutoplay = () => {
   intervalId = setInterval(() => {
     nextSlide()
   }, 8000)
-}
-
-const getDirections = () => {
-  window.open('https://maps.google.com', '_blank')
 }
 
 onMounted(() => {

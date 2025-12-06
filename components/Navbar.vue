@@ -27,13 +27,13 @@
         </a>
       </div>
 
-      <!-- CTA Button Desktop -->
-      <div 
-        class="hidden md:block px-6 cursor-pointer py-3 bg-[#3C2A21] text-[#C9A96E] text-[15px] font-medium tracking-wider rounded-lg transition-all duration-300 hover:bg-[#D4A574] hover:text-white hover:shadow-lg hover:scale-105 active:scale-95"
-        @click="getDirections"
-      >
-        Get Directions
-      </div>
+     <!-- CTA Button Desktop -->
+    <a 
+      href="#gift-us"
+      class="hidden md:block px-6 py-3 bg-[#3C2A21] text-[#C9A96E] text-[15px] font-medium tracking-wider rounded-lg transition-all duration-300 hover:bg-[#D4A574] hover:text-white hover:shadow-lg hover:scale-105 active:scale-95"
+    >
+      Gift Us
+    </a>
 
       <!-- Mobile Menu Button -->
       <button 
@@ -92,15 +92,17 @@
           </a>
           
           <div 
-            class="pt-4 border-t border-[#D4A574]/20"
-          >
-            <button
-              @click="getDirections"
-              class="w-full py-3 px-4 bg-[#3C2A21] text-[#C9A96E] text-[15px] font-medium tracking-wider rounded-lg transition-all duration-300 hover:bg-[#D4A574] hover:text-white hover:shadow-lg active:scale-95"
-            >
-              Get Directions
-            </button>
-          </div>
+  class="pt-4 border-t border-[#D4A574]/20"
+>
+<a
+  
+    href="#gift-us"
+    @click="closeMenu"
+    class="block w-full py-3 px-4 bg-[#3C2A21] text-[#C9A96E] text-[15px] font-medium tracking-wider rounded-lg transition-all duration-300 hover:bg-[#D4A574] hover:text-white hover:shadow-lg active:scale-95 text-center"
+  >
+    Gift Us
+  </a>
+</div>
         </div>
       </div>
     </transition>
@@ -116,7 +118,7 @@ const navLinks = [
   { text: 'Our Story', href: '#our-story' },
   { text: 'Proposal', href: '#proposal' },
   { text: 'Memories', href: '#memories' },
-  { text: 'Gift Us', href: '#gift-us' }
+  // { text: 'Gift Us', href: '#gift-us' }
 ]
 
 const toggleMenu = () => {

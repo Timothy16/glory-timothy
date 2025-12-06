@@ -48,7 +48,7 @@
           <div class="relative z-10">
             <div class="flex items-center gap-3 mb-6">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4A574] to-[#C9A96E] flex items-center justify-center">
-                <span class="text-white text-xl font-bold">5</span>
+                <span class="text-white text-xl font-bold">2</span>
               </div>
               <div>
                 <p class="text-sm text-[#D4A574] font-medium tracking-wider uppercase">Years Ago</p>
@@ -115,7 +115,7 @@
           <div class="w-3 h-3 rounded-full bg-[#D4A574] animate-pulse"></div>
           <div class="h-px w-16 sm:w-32 bg-gradient-to-r from-[#D4A574] to-[#C9A96E]"></div>
           <div class="text-center px-4 sm:px-6 py-3 bg-gradient-to-r from-[#D4A574] to-[#C9A96E] rounded-full">
-            <p class="text-white font-medium text-sm sm:text-base tracking-wider">2020 → Forever</p>
+            <p class="text-white font-medium text-sm sm:text-base tracking-wider">2023 → Forever</p>
           </div>
           <div class="h-px w-16 sm:w-32 bg-gradient-to-l from-[#D4A574] to-[#C9A96E]"></div>
           <div class="w-3 h-3 rounded-full bg-[#C9A96E] animate-pulse"></div>
@@ -129,8 +129,8 @@
         :class="{ 'opacity-0 translate-y-10': !quoteVisible, 'opacity-100 translate-y-0': quoteVisible }"
       >
         <p class="text-2xl sm:text-3xl md:text-4xl font-light text-[#3C2A21] italic leading-relaxed">
-          "Love is not about how many days, months, or years you have been together. 
-          <span class="text-[#D4A574] font-medium">Love is about how much you love each other every single day.</span>"
+          "Our love story is not measured by the calendar's count of days, months, or years.
+          <span class="text-[#D4A574] font-medium">It is measured by the profound depth of devotion we intentionally choose and cherish, together, every single day.</span>"
         </p>
       </div>
     </div>

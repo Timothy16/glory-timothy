@@ -31,7 +31,7 @@
           Gift Us
         </h2>
         <p class="text-base sm:text-lg text-[#3C2A21]/70 max-w-2xl mx-auto leading-relaxed">
-          Your presence is the greatest gift, but if you wish to bless us, here are some ways you can
+         Your presence is truly the most treasured gift we could receive. Should you wish to bless us further, we have outlined a few options below:
         </p>
       </div>
 
@@ -116,19 +116,10 @@
         :class="{ 'opacity-0 translate-y-10': !monetaryVisible, 'opacity-100 translate-y-0': monetaryVisible }"
       >
         <div class="text-center mb-10">
-          <div class="inline-flex items-center gap-3 mb-3">
-            <div class="h-px w-12 bg-gradient-to-r from-transparent to-[#D4A574]"></div>
-            <svg class="w-6 h-6 text-[#C9A96E]" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
-            </svg>
-            <div class="h-px w-12 bg-gradient-to-l from-transparent to-[#C9A96E]"></div>
-          </div>
+          
           <h3 class="text-2xl sm:text-3xl font-bold text-[#3C2A21] mb-2">
             Monetary Gifts 💝
           </h3>
-          <p class="text-sm sm:text-base text-[#3C2A21]/60">
-            Or bless us with a monetary gift
-          </p>
         </div>
 
         <div class="max-w-4xl mx-auto">
@@ -165,7 +156,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="text-base sm:text-lg font-bold text-[#3C2A21]">United Bank For Africa</p>
+                      <p class="text-base sm:text-lg font-bold text-[#3C2A21]">Kuda</p>
                     </div>
                   </div>
                 </div>
@@ -180,7 +171,7 @@
                   </div>
                   <div class="bg-white rounded-xl p-4 border border-[#D4A574]/20 shadow-sm">
                     <p class="text-base sm:text-lg font-bold text-[#3C2A21] break-words">
-                      Afolabi Timothy
+                      Glory Oluwakemi Adekunle
                     </p>
                   </div>
                 </div>
@@ -196,8 +187,8 @@
                   <div class="bg-white rounded-xl p-4 border border-[#D4A574]/20 shadow-sm">
                     <div class="flex items-center justify-between gap-3">
                       <p class="text-xl sm:text-2xl font-bold text-[#3C2A21] tracking-wider">
-                        2068461254
-                      </p>
+                        2016128606
+                      </p>  
                       <button
                         @click="copyAccountNumber"
                         class="group flex-shrink-0 p-2 hover:bg-[#D4A574]/10 rounded-lg transition-all duration-300 hover:scale-110 active:scale-95"
@@ -256,7 +247,7 @@
               <!-- Thank You Message -->
               <div class="text-center space-y-4">
                 <p class="text-base sm:text-lg italic text-[#3C2A21]/70 leading-relaxed" style="font-family: Georgia, serif;">
-                  Thank you for your love and generosity
+                  We are truly grateful.
                 </p>
                 <div class="flex items-center justify-center gap-2">
                   <div class="w-2 h-2 rounded-full bg-[#D4A574] animate-pulse"></div>
@@ -304,12 +295,22 @@ let observer = null
 let copyTimeout = null
 
 // Wishlist Items with SVG icons
+// Wishlist Items with SVG icons
 const wishlistItems = [
   {
     id: 1,
-    name: 'Kitchen Blender Set',
+    name: 'Hisense 9kg Top Loader Automatic Washing Machine',
+    category: 'Home Appliances',
+    link: 'https://www.jumia.com.ng/hisense-9kg-top-loader-automatic-washing-machine-washspin-418908260.html?utm_medium=social&utm_campaign=pdpshare-apps',
+    icon: (props) => h('svg', { ...props, fill: 'currentColor', viewBox: '0 0 20 20' }, [
+      h('path', { 'fill-rule': 'evenodd', d: 'M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 1a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm4-4a1 1 0 100 2h.01a1 1 0 100-2H13zM9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM7 8a1 1 0 000 2h.01a1 1 0 000-2H7z', 'clip-rule': 'evenodd' })
+    ])
+  },
+  {
+    id: 2,
+    name: 'Silver Crest 8L Air Fryer Oven',
     category: 'Kitchen Appliances',
-    link: 'https://amazon.com',
+    link: 'https://www.jumia.com.ng/silver-crest-8l-glass-window-electric-digital-touch-screen-air-fryer-oven-363415559.html?utm_medium=social&utm_campaign=pdpshare-apps',
     icon: (props) => h('svg', { ...props, fill: 'currentColor', viewBox: '0 0 20 20' }, [
       h('path', { d: 'M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z' }),
       h('path', { d: 'M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z' }),
@@ -317,48 +318,21 @@ const wishlistItems = [
     ])
   },
   {
-    id: 2,
-    name: 'Premium Bedding Set',
-    category: 'Home Essentials',
-    link: 'https://amazon.com',
-    icon: (props) => h('svg', { ...props, fill: 'currentColor', viewBox: '0 0 20 20' }, [
-      h('path', { d: 'M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z' })
-    ])
-  },
-  {
     id: 3,
-    name: 'Honeymoon Fund',
-    category: 'Travel & Experience',
-    link: 'https://honeyfund.com',
-    icon: (props) => h('svg', { ...props, fill: 'currentColor', viewBox: '0 0 20 20' }, [
-      h('path', { d: 'M2 6a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 100 4v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2a2 2 0 100-4V6z' })
-    ])
-  },
-  {
-    id: 4,
-    name: 'Dining Set',
-    category: 'Home Decor',
-    link: 'https://wayfair.com',
-    icon: (props) => h('svg', { ...props, fill: 'currentColor', viewBox: '0 0 20 20' }, [
-      h('path', { 'fill-rule': 'evenodd', d: 'M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 1a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm4-4a1 1 0 100 2h.01a1 1 0 100-2H13zM9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM7 8a1 1 0 000 2h.01a1 1 0 000-2H7z', 'clip-rule': 'evenodd' })
-    ])
-  },
-  {
-    id: 5,
-    name: 'Coffee Maker',
-    category: 'Kitchen Appliances',
-    link: 'https://target.com',
+    name: 'Haier Thermocool 146L Chest Freezer',
+    category: 'Home Appliances',
+    link: 'https://www.jumia.com.ng/haier-thermocool-146-litres-chest-freezer-htf-150-silver-3-years-warranty-110318763.html?utm_medium=social&utm_campaign=pdpshare-apps',
     icon: (props) => h('svg', { ...props, fill: 'currentColor', viewBox: '0 0 20 20' }, [
       h('path', { 'fill-rule': 'evenodd', d: 'M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z', 'clip-rule': 'evenodd' })
     ])
   },
   {
-    id: 6,
-    name: 'Smart TV 55"',
-    category: 'Electronics',
-    link: 'https://bestbuy.com',
+    id: 4,
+    name: 'Bruhm 3 Gas + 1 Electric Standing Cooker',
+    category: 'Kitchen Appliances',
+    link: 'https://www.jumia.com.ng/bruhm-3gas-1-electric-standing-cooker-ovengrill-bgc-5531ib-351518909.html?utm_medium=social&utm_campaign=pdpshare-apps',
     icon: (props) => h('svg', { ...props, fill: 'currentColor', viewBox: '0 0 20 20' }, [
-      h('path', { 'fill-rule': 'evenodd', d: 'M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z', 'clip-rule': 'evenodd' })
+      h('path', { d: 'M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z' })
     ])
   }
 ]
