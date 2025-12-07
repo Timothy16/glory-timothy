@@ -123,26 +123,32 @@
       </div>
 
       <!-- Bottom Quote -->
-      <div 
-        ref="quoteRef"
-        class="text-center max-w-3xl mx-auto transition-all duration-1000"
-        :class="{ 'opacity-0 translate-y-10': !quoteVisible, 'opacity-100 translate-y-0': quoteVisible }"
-      >
-        <p class="text-2xl sm:text-3xl md:text-4xl font-light text-[#3C2A21] italic leading-relaxed">
-        “He came softly, but his sincerity echoed loudly in my spirit.”
-        <span class="block mt-3 text-base sm:text-lg not-italic font-medium text-[#3C2A21]">
-          — Glory
-        </span>
-      </p>
+<div 
+  ref="quoteRef"
+  class="text-center max-w-8xl mx-auto transition-all duration-1000"
+  :class="{ 'opacity-0 translate-y-10': !quoteVisible, 'opacity-100 translate-y-0': quoteVisible }"
+>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+    
+    <!-- Her Quote -->
+    <p class="text-2xl sm:text-3xl md:text-4xl font-light text-[#3C2A21] italic leading-relaxed">
+      “He came softly, but his sincerity echoed loudly in my spirit.”
+      <span class="block mt-3 text-base sm:text-lg not-italic font-medium text-[#3C2A21]">
+        — Glory
+      </span>
+    </p>
 
-      <p class="mt-10 text-2xl sm:text-3xl md:text-4xl font-light text-[#D4A574] italic leading-relaxed">
-        “She listened with her heart, and her presence answered me completely.”
-        <span class="block mt-3 text-base sm:text-lg not-italic font-medium text-[#D4A574]">
-          — Tim
-        </span>
-      </p>
+    <!-- His Quote -->
+    <p class="text-2xl sm:text-3xl md:text-4xl font-light text-[#D4A574] italic leading-relaxed">
+      “She listened with her heart, and her presence answered me completely.”
+      <span class="block mt-3 text-base sm:text-lg not-italic font-medium text-[#D4A574]">
+        — Tim
+      </span>
+    </p>
 
-      </div>
+  </div>
+</div>
+
     </div>
   </section>
 </template>

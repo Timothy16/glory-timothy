@@ -58,14 +58,7 @@
               class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-75"
               :class="photo.height"
             />
-            
-            <!-- Overlay on Hover -->
-            <div class="absolute inset-0 bg-gradient-to-t from-[#3C2A21]/90 via-[#3C2A21]/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out">
-              <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 ease-out">
-                <p class="text-white text-sm sm:text-base font-medium">{{ photo.caption }}</p>
-                <p class="text-[#D4A574] text-xs sm:text-sm mt-1">{{ photo.date }}</p>
-              </div>
-            </div>
+          
 
             <!-- Decorative Corner -->
             <div class="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-[#C9A96E] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -135,95 +128,85 @@ const photoVisibility = reactive({})
 
 let observer = null
 
-// Using Unsplash couple/wedding photos
+
 const photos = [
   {
     id: 1,
-    url: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_800,q_auto:good,f_auto/v1765065492/IMG_20250125_094559_ukpxzx.jpg',
     alt: 'Memory 1',
     caption: 'First Dance',
-    date: 'June 2020',
     span: 'col-span-1 row-span-1',
     height: 'h-64 sm:h-80'
   },
   {
     id: 2,
-    url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765065453/IMG_20230407_172420_2_ntmztu.jpg',
     alt: 'Memory 2',
     caption: 'Sunset Together',
-    date: 'August 2020',
     span: 'col-span-1 row-span-1',
     height: 'h-64 sm:h-80'
   },
   {
     id: 3,
-    url: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1200,q_auto:good,f_auto/v1765065456/IMG_20230319_182030_2_ff8ija.jpg',
     alt: 'Memory 3',
     caption: 'Adventure Time',
-    date: 'December 2020',
     span: 'col-span-1 md:col-span-2 row-span-1',
     height: 'h-64 sm:h-80'
   },
   {
     id: 4,
-    url: 'https://images.unsplash.com/photo-1529636798458-92182e662485?w=800&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_800,q_auto:good,f_auto/v1765065464/IMG_20230722_205652_f82lyn.jpg',
     alt: 'Memory 4',
     caption: 'Beach Vibes',
-    date: 'March 2021',
     span: 'col-span-1 row-span-1',
     height: 'h-64 sm:h-80'
   },
   {
     id: 5,
-    url: 'https://images.unsplash.com/photo-1612160808975-5ad74ccbbb80?w=800&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_800,q_auto:good,f_auto/v1765065490/IMG_20240517_175011_q39aui.jpg',
     alt: 'Memory 5',
     caption: 'City Lights',
-    date: 'July 2021',
     span: 'col-span-1 row-span-1',
     height: 'h-64 sm:h-80'
   },
   {
     id: 6,
-    url: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_800,q_auto:good,f_auto/v1765065478/IMG_20240107_083645_vkswec.jpg',
     alt: 'Memory 6',
     caption: 'Special Moment',
-    date: 'November 2021',
     span: 'col-span-1 row-span-1',
     height: 'h-64 sm:h-80'
   },
   {
     id: 7,
-    url: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_800,q_auto:good,f_auto/v1765065490/IMG_20241215_214032_fojkoi.jpg',
     alt: 'Memory 7',
     caption: 'Forever Love',
-    date: 'February 2022',
     span: 'col-span-1 row-span-1',
     height: 'h-64 sm:h-80'
   },
   {
     id: 8,
-    url: 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1200,q_auto:good,f_auto/v1765065456/IMG-20250601-WA0087_mpxfmh.jpg',
     alt: 'Memory 8',
     caption: 'Golden Hour',
-    date: 'May 2022',
     span: 'col-span-1 md:col-span-2 row-span-1',
     height: 'h-64 sm:h-80'
   },
   {
     id: 9,
-    url: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_800,q_auto:good,f_auto/v1765065491/IMG_20241222_180346_zzxvlg.jpg',
     alt: 'Memory 9',
     caption: 'Pure Joy',
-    date: 'September 2022',
     span: 'col-span-1 row-span-1',
     height: 'h-64 sm:h-80'
   },
   {
     id: 10,
-    url: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_800,q_auto:good,f_auto/v1765065858/INC_0516_ohcfuj.jpg',
     alt: 'Memory 10',
     caption: 'Celebration',
-    date: 'December 2022',
     span: 'col-span-1 row-span-1',
     height: 'h-64 sm:h-80'
   }

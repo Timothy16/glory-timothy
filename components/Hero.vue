@@ -18,6 +18,7 @@
             :src="mobileImages[index].url"
             :alt="mobileImages[index].alt"
             :loading="index === 0 ? 'eager' : 'lazy'"
+            :fetchpriority="index === 0 ? 'high' : 'auto'"
             class="md:hidden w-full h-full object-cover object-top"
           />
           <!-- Desktop Images -->
@@ -25,6 +26,7 @@
             :src="desktopImages[index].url"
             :alt="desktopImages[index].alt"
             :loading="index === 0 ? 'eager' : 'lazy'"
+            :fetchpriority="index === 0 ? 'high' : 'auto'"
             class="hidden md:block w-full h-full object-cover object-top"
           />
           <!-- Gradient Overlay -->

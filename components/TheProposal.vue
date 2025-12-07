@@ -56,6 +56,7 @@
                   <NuxtImg
                     :src="image.url"
                     :alt="image.alt"
+                    :loading="index === 0 ? 'eager' : 'lazy'"
                     class="w-full h-full object-cover"
                   />
                   <!-- Subtle Overlay -->
@@ -176,41 +177,42 @@ const currentSlide = ref(0)
 let intervalId = null
 
 // Using Unsplash proposal/engagement images
+// Proposal images - Optimized with Cloudinary transformations
 const proposalImages = [
   {
     id: 1,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765050667/IMG_6012_bdisa9.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1200,q_auto:good,f_auto/v1765050667/IMG_6012_bdisa9.jpg',
     alt: 'Proposal moment 1'
   },
   {
     id: 2,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765051111/IMG_6047_lfskyd.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1200,q_auto:good,f_auto/v1765051111/IMG_6047_lfskyd.jpg',
     alt: 'Proposal moment 2'
   },
   {
     id: 3,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765051041/IMG_6024_fl0igh.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1200,q_auto:good,f_auto/v1765051041/IMG_6024_fl0igh.jpg',
     alt: 'Proposal moment 3'
   },
   {
     id: 4,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765051049/IMG_6152_dvpuvu.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1200,q_auto:good,f_auto/v1765051049/IMG_6152_dvpuvu.jpg',
     alt: 'Proposal moment 4'
   },
   {
     id: 5,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765051035/IMG_6238_kuiopq.jpg',
-    alt: 'Proposal moment 4'
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1200,q_auto:good,f_auto/v1765051035/IMG_6238_kuiopq.jpg',
+    alt: 'Proposal moment 5'
   },
   {
     id: 6,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765051045/IMG_5997_m89tgr.jpg',
-    alt: 'Proposal moment 4'
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1200,q_auto:good,f_auto/v1765051045/IMG_5997_m89tgr.jpg',
+    alt: 'Proposal moment 6'
   },
   {
     id: 7,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765051035/IMG_6238_kuiopq.jpg',
-    alt: 'Proposal moment 4'
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1200,q_auto:good,f_auto/v1765051035/IMG_6238_kuiopq.jpg',
+    alt: 'Proposal moment 7'
   }
 ]
 

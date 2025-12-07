@@ -19,13 +19,13 @@
 
         <!-- Welcome Message -->
         <p class="text-[#D4A574] mb-8 italic">
-          Welcome to our love story ❤️
+          Welcome to our love page ❤️
         </p>
 
         <!-- Start Button -->
         <button
           @click="startExperience"
-          class="px-8 py-3 bg-[#C9A96E] hover:bg-[#D4A574] text-white font-semibold rounded-full shadow-lg transition-all duration-500"
+          class="px-8 py-3 bg-gradient-to-r from-[#D4A574] to-[#C9A96E] hover:from-[#C9A96E] hover:to-[#D4A574] text-white font-semibold rounded-full shadow-lg transition-all duration-500 transform hover:scale-105 active:scale-95"
         >
           Start
         </button>
