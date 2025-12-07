@@ -135,7 +135,7 @@ const desktopImages = [
   },
   {
     id: 2,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1920,q_auto:good,f_auto/v1765054925/GT_013__web_fumxqo.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1920,q_auto:good,f_auto/v1765058600/GT_007_web_py6szk.jpg',
     alt: 'Wedding celebration moment 2'
   },
   {
@@ -145,7 +145,8 @@ const desktopImages = [
   },
   {
     id: 4,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1920,q_auto:good,f_auto/v1765058600/GT_007_web_py6szk.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1920,q_auto:good,f_auto/v1765054925/GT_013__web_fumxqo.jpg',
+    
     alt: 'Wedding celebration moment 4'
   },
   {
@@ -164,7 +165,7 @@ const mobileImages = [
   },
   {
     id: 2,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_768,q_auto:good,f_auto/v1765059596/GT_013_Graded_jr0mzt.jpg',
+   url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_768,q_auto:good,f_auto/v1765059670/GT_007_Graded_izvnx5.jpg',
     alt: 'Wedding celebration moment 2'
   },
   {
@@ -174,7 +175,8 @@ const mobileImages = [
   },
   {
     id: 4,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_768,q_auto:good,f_auto/v1765059670/GT_007_Graded_izvnx5.jpg',
+     url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_768,q_auto:good,f_auto/v1765059596/GT_013_Graded_jr0mzt.jpg',
+    
     alt: 'Wedding celebration moment 4'
   },
   {
