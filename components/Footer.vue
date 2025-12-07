@@ -48,7 +48,8 @@
             <div class="absolute -top-6 left-0 text-6xl sm:text-7xl text-[#D4A574]/20 font-serif leading-none">"</div>
             
             <p class="text-base sm:text-lg md:text-xl text-white/90 text-center leading-relaxed italic px-8 sm:px-16 py-8" style="font-family: Georgia, serif;">
-              A successful marriage requires falling in love many times, always with the same person. Two souls with but a single thought, two hearts that beat as one. Thank you for celebrating this special moment with us and for the love and joy you bring to our lives.
+             Love becomes a beautiful journey when we choose each other again and again, through seasons, growth, laughter, and quiet moments. Our hearts have found their rhythm in one another, moving in the same direction, dreaming the same dreams.
+              Thank you for standing with us today, for sharing in our joy, and for being part of the story we’re building together ❤️
             </p>
             
             <div class="absolute -bottom-6 right-0 text-6xl sm:text-7xl text-[#C9A96E]/20 font-serif leading-none transform rotate-180">"</div>

@@ -140,7 +140,7 @@ const photos = [
   },
   {
     id: 2,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/v1765065453/IMG_20230407_172420_2_ntmztu.jpg',
+     url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_800,q_auto:good,f_auto/v1765065492/IMG_20250125_094559_ukpxzx.jpg',
     alt: 'Memory 2',
     caption: 'Sunset Together',
     span: 'col-span-1 row-span-1',
@@ -148,7 +148,7 @@ const photos = [
   },
   {
     id: 3,
-     url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_800,q_auto:good,f_auto/v1765065492/IMG_20250125_094559_ukpxzx.jpg',
+     url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_800,q_auto:good,f_auto/v1765065453/IMG_20230407_172420_2_ntmztu.jpg',
     alt: 'Memory 3',
     caption: 'Adventure Time',
     span: 'col-span-1 md:col-span-2 row-span-1',

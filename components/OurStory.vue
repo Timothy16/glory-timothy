@@ -35,8 +35,8 @@
       </div>
 
       <!-- Story Content -->
-      <div class="grid md:grid-cols-2 gap-8 sm:gap-12 mb-12">
-        <!-- First Story Card -->
+      <div class="grid md:grid-cols-2 gap-8 sm:gap-12 mb-12 items-start">
+        <!-- First Story Card - Tim's Story -->
         <div 
           ref="card1Ref"
           class="group relative bg-white rounded-2xl p-8 sm:p-10 shadow-lg hover:shadow-2xl transition-all duration-700 border border-[#D4A574]/20"
@@ -48,28 +48,82 @@
           <div class="relative z-10">
             <div class="flex items-center gap-3 mb-6">
               <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4A574] to-[#C9A96E] flex items-center justify-center">
-                <span class="text-white text-xl font-bold">2</span>
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
+                </svg>
               </div>
               <div>
-                <p class="text-sm text-[#D4A574] font-medium tracking-wider uppercase">Years Ago</p>
-                <p class="text-xs text-[#3C2A21]/60">Where it began</p>
+                <p class="text-sm text-[#D4A574] font-medium tracking-wider uppercase">His Story</p>
+                <p class="text-xs text-[#3C2A21]/60">Tim's Perspective</p>
               </div>
             </div>
             
-            <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80 mb-4">
-              Five years ago, our paths crossed in the most unexpected way, and from that moment, we knew something special was beginning.
-            </p>
-            
-            <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
-              Through laughter, adventures, and countless memories, our love has grown stronger with each passing day.
-            </p>
+            <!-- Story Content -->
+            <div class="space-y-4">
+              <!-- Preview (always visible) -->
+              <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                On a beautiful Saturday morning, I saw a damsel in a wine-colored dress on the chief bridesmaid duty, while I was on groomsmen duty in my Agbada. I noticed the joy and happiness on her face.
+              </p>
+              
+              <!-- Expanded Content - Fixed Height & Scrollable -->
+              <div 
+                class="overflow-hidden transition-all duration-500 ease-in-out"
+                :class="{ 'h-0': !card1Expanded, 'h-[400px]': card1Expanded }"
+              >
+                <div class="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-[#D4A574]/30 scrollbar-track-transparent pt-4 pr-2">
+                  <div class="space-y-4">
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      I knew it was her elder sister's wedding and that she should be happy, but what I saw went beyond that moment. Instantly, something stirred in me, I knew I would have a part to play in her life, though I couldn't figure out exactly how at that moment.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      Days, months, and some years went by, and the only thing I ever saw were her pictures on her sister's husband's status. I kept telling myself, "This is the one." I decided to learn more about this beauty, and I was told she is God-fearing, kind, intelligent, and full of joy. I said to myself, "I've found the one my heart desires."
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      They spoke with her on my behalf, and we got connected. From our very first call, it felt as if we had known each other for years. The conversation flowed effortlessly, and from day one, I kept telling her, "I will be here for a very long time."
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      Our conversations grew stronger; every late-night call became a moment I looked forward to. The first time we met, I was nervous because she had never seen me in person before, though I had seen her. I was welcomed with a warm hug that I will never forget, even today, I still feel the peace that came with that embrace.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      Days turned into months, and months turned into years. Our love grew deeper, our connection strengthened, and I knew without a doubt that she was the woman I wanted to spend the rest of my life with.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      As time went on and our conversations deepened, I found clarity in the little moments, the laughter we shared, the values we aligned on, the prayers we prayed, and the quiet consistency of our bond. From that point on, the journey has been nothing short of beautiful.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      Her love reflects everything I ever hoped for, gentle in nature, strong in depth, steady in commitment, and full of understanding. She loves intentionally, with peace, sacrifice, grace, and sincerity.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      I am marrying an extraordinary woman, thoughtful, compassionate, and beautiful inside and out, the one whose presence brings a sense of home, and the one God had written into my story long before I ever realized it. Together, this marks the beginning of our forever. ❤️
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- See More/Less Button -->
+              <button
+                @click="card1Expanded = !card1Expanded"
+                class="mt-6 text-[#D4A574] hover:text-[#C9A96E] font-medium text-sm flex items-center gap-2 transition-colors duration-300"
+              >
+                {{ card1Expanded ? 'See Less' : 'See More' }}
+                <svg 
+                  class="w-4 h-4 transition-transform duration-300" 
+                  :class="{ 'rotate-180': card1Expanded }"
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
           </div>
           
           <!-- Hover Gradient Effect -->
           <div class="absolute inset-0 bg-gradient-to-br from-[#D4A574]/5 to-[#C9A96E]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
         </div>
 
-        <!-- Second Story Card -->
+        <!-- Second Story Card - Glory's Story -->
         <div 
           ref="card2Ref"
           class="group relative bg-white rounded-2xl p-8 sm:p-10 shadow-lg hover:shadow-2xl transition-all duration-700 border border-[#C9A96E]/20"
@@ -86,18 +140,73 @@
                 </svg>
               </div>
               <div>
-                <p class="text-sm text-[#C9A96E] font-medium tracking-wider uppercase">Our Journey</p>
-                <p class="text-xs text-[#3C2A21]/60">Building forever</p>
+                <p class="text-sm text-[#C9A96E] font-medium tracking-wider uppercase">Her Story</p>
+                <p class="text-xs text-[#3C2A21]/60">Glory's Perspective</p>
               </div>
             </div>
             
-            <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80 mb-4">
-              We've shared quiet moments and grand adventures, built dreams together, and discovered that home isn't a place—it's being with each other.
-            </p>
-            
-            <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
-              Our journey has been filled with love, growth, and the beautiful realization that we want to spend forever together.
-            </p>
+            <!-- Story Content -->
+            <div class="space-y-4">
+              <!-- Preview (always visible) -->
+              <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                If someone had told me I would meet my husband the way I did, I honestly would have laughed. Our story started quietly, through family long before I even knew anything was happening.
+              </p>
+              
+              <!-- Expanded Content - Fixed Height & Scrollable -->
+              <div 
+                class="overflow-hidden transition-all duration-500 ease-in-out"
+                :class="{ 'h-0': !card2Expanded, 'h-[400px]': card2Expanded }"
+              >
+                <div class="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-[#C9A96E]/30 scrollbar-track-transparent pt-4 pr-2">
+                  <div class="space-y-4">
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      It started all as a joke until it became real. I have always been loud about my kind of man and God used my very own people to orchestrate this divine meeting.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      I was on a visit in Ibadan with my sister when a conversation about my relationship started and as usual, the response was, no one for now. It seems like my sister and her husband were waiting for me to say that when they said, they had someone they would love me to be friends with.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      At first, it seems like the usual whining. But it kept getting serious, they spoke about him with such seriousness, warmth and certainty. Who is this person? I asked. Apparently, he was one of the groomsmen at their wedding while I was the Chief Bridesmaid. So, while I was going about my duties, someone was observing me with interest and admiration. Lol!
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      I asked some questions about him, and the responses were positive. Then, I gave the go-ahead to share my contact with him. October 16, 2025 (A whole 15 months after), he reached out and from that conversation, it felt easy, like I had known him for a long time. We shared similar experiences, common belief, same values, common conversations and spiritual grounding. Talking to him felt natural.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      Still, I needed to meet him physically. He had seen me before, but I had never truly seen him. He travelled down and from a distance, I could tell a thousand thing were going through his mind, but I saw something different in that instance. I could read him. I could hear what his heart was saying. I could read everything, his intention, his sincerity, his quiet strength. In that moment, I was settled in my spirit. I gave him a warm welcome hug as a sign of "You're welcome here" so he could stop overthinking. Lol!
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      From that day, our conversations grew deeper, softer, better. He asked me out, not for something casual, but for something serious, something meaningful, something that could lead to marriage. I gave him a response he wasn't expecting. And that shook him. For a few days, the weight of my response sat between us.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      But we continued being friends. Months passed, conversations continued, and somewhere between the laughter, the shared values, the prayers, and the gentle consistency, my heart found its peace. About six months later, I had my conviction, and I said yes.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      And since then, it has been the most beautiful journey. His love is everything I prayed for; gentle, kind, deep, soft, steady, and understanding. He didn't come loudly, he came with calmness, intention, and grace.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
+                      I'm getting married to the most intentional, kind, and handsome man, the one whose love is home, the one God wrote into my story long before I knew it. This is how our journey to forever began. ❤
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- See More/Less Button -->
+              <button
+                @click="card2Expanded = !card2Expanded"
+                class="mt-6 text-[#C9A96E] hover:text-[#D4A574] font-medium text-sm flex items-center gap-2 transition-colors duration-300"
+              >
+                {{ card2Expanded ? 'See Less' : 'See More' }}
+                <svg 
+                  class="w-4 h-4 transition-transform duration-300" 
+                  :class="{ 'rotate-180': card2Expanded }"
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
           </div>
           
           <!-- Hover Gradient Effect -->
@@ -123,32 +232,26 @@
       </div>
 
       <!-- Bottom Quote -->
-<div 
-  ref="quoteRef"
-  class="text-center max-w-8xl mx-auto transition-all duration-1000"
-  :class="{ 'opacity-0 translate-y-10': !quoteVisible, 'opacity-100 translate-y-0': quoteVisible }"
->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-    
-    <!-- Her Quote -->
-    <p class="text-2xl sm:text-3xl md:text-4xl font-light text-[#3C2A21] italic leading-relaxed">
-      “He came softly, but his sincerity echoed loudly in my spirit.”
-      <span class="block mt-3 text-base sm:text-lg not-italic font-medium text-[#3C2A21]">
-        — Glory
-      </span>
-    </p>
-
-    <!-- His Quote -->
-    <p class="text-2xl sm:text-3xl md:text-4xl font-light text-[#D4A574] italic leading-relaxed">
-      “She listened with her heart, and her presence answered me completely.”
-      <span class="block mt-3 text-base sm:text-lg not-italic font-medium text-[#D4A574]">
-        — Tim
-      </span>
-    </p>
-
-  </div>
-</div>
-
+      <div 
+        ref="quoteRef"
+        class="text-center max-w-8xl mx-auto transition-all duration-1000"
+        :class="{ 'opacity-0 translate-y-10': !quoteVisible, 'opacity-100 translate-y-0': quoteVisible }"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+          <p class="text-2xl sm:text-3xl md:text-4xl font-light text-[#3C2A21] italic leading-relaxed">
+            "He came softly, but his sincerity echoed loudly in my spirit."
+            <span class="block mt-3 text-base sm:text-lg not-italic font-medium text-[#3C2A21]">
+              — Glory
+            </span>
+          </p>
+          <p class="text-2xl sm:text-3xl md:text-4xl font-light text-[#D4A574] italic leading-relaxed">
+            "She listened with her heart, and her presence answered me completely."
+            <span class="block md:text-right mt-3 text-base sm:text-lg not-italic font-medium text-[#D4A574]">
+              — Tim
+            </span>
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -156,18 +259,25 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
+// Refs for DOM elements
 const headerRef = ref(null)
 const card1Ref = ref(null)
 const card2Ref = ref(null)
 const timelineRef = ref(null)
 const quoteRef = ref(null)
 
+// Visibility states for scroll animations
 const headerVisible = ref(false)
 const card1Visible = ref(false)
 const card2Visible = ref(false)
 const timelineVisible = ref(false)
 const quoteVisible = ref(false)
 
+// Expanded states for story cards
+const card1Expanded = ref(false)
+const card2Expanded = ref(false)
+
+// Intersection Observer
 let observer = null
 
 const observeElements = () => {
@@ -179,17 +289,11 @@ const observeElements = () => {
   observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        if (entry.target === headerRef.value) {
-          headerVisible.value = true
-        } else if (entry.target === card1Ref.value) {
-          card1Visible.value = true
-        } else if (entry.target === card2Ref.value) {
-          card2Visible.value = true
-        } else if (entry.target === timelineRef.value) {
-          timelineVisible.value = true
-        } else if (entry.target === quoteRef.value) {
-          quoteVisible.value = true
-        }
+        if (entry.target === headerRef.value) headerVisible.value = true
+        else if (entry.target === card1Ref.value) card1Visible.value = true
+        else if (entry.target === card2Ref.value) card2Visible.value = true
+        else if (entry.target === timelineRef.value) timelineVisible.value = true
+        else if (entry.target === quoteRef.value) quoteVisible.value = true
       }
     })
   }, options)
@@ -206,36 +310,40 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  if (observer) {
-    observer.disconnect()
-  }
+  if (observer) observer.disconnect()
 })
 </script>
 
 <style scoped>
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
 
 @keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0px) translateX(0px);
-  }
-  50% {
-    transform: translateY(-15px) translateX(10px);
-  }
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-15px) translateX(10px); }
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-delayed { animation: float-delayed 8s ease-in-out infinite; }
+
+/* Custom scrollbar - works in Webkit browsers (Chrome, Safari, Edge) */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
 }
 
-.animate-float-delayed {
-  animation: float-delayed 8s ease-in-out infinite;
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: currentColor;
+  border-radius: 3px;
+  opacity: 0.3;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  opacity: 0.5;
 }
 </style>
