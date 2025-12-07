@@ -94,7 +94,7 @@ const SeoHead = defineComponent({
         },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://glory-timothy.vercel.app' },
-        { property: 'og:image', content: 'https://glory-timothy.vercel.app/favicon.png' },
+        { property: 'og:image', content: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1920,q_auto:good,f_auto/v1765058600/GT_001_web_hkpuvk.jpg' },
         {
           property: 'og:image:alt',
           content:
@@ -113,7 +113,7 @@ const SeoHead = defineComponent({
           content:
             'Celebrate with us! Explore our proposal, memories, and help build our future home with your gift.'
         },
-        { name: 'twitter:image', content: 'https://glory-timothy.vercel.app/favicon.png' },
+        { name: 'twitter:image', content: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1920,q_auto:good,f_auto/v1765058600/GT_001_web_hkpuvk.jpg' },
         {
           name: 'twitter:image:alt',
           content: 'Glory and Timothy holding hands at sunset, Lagos skyline in background – Nigerian couple engagement'

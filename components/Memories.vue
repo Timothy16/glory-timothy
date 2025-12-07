@@ -132,7 +132,7 @@ let observer = null
 const photos = [
   {
     id: 1,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_800,q_auto:good,f_auto/v1765065492/IMG_20250125_094559_ukpxzx.jpg',
+    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1200,q_auto:good,f_auto/v1765065456/IMG_20230319_182030_2_ff8ija.jpg',
     alt: 'Memory 1',
     caption: 'First Dance',
     span: 'col-span-1 row-span-1',
@@ -148,7 +148,7 @@ const photos = [
   },
   {
     id: 3,
-    url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_1200,q_auto:good,f_auto/v1765065456/IMG_20230319_182030_2_ff8ija.jpg',
+     url: 'https://res.cloudinary.com/dtmt0vas4/image/upload/w_800,q_auto:good,f_auto/v1765065492/IMG_20250125_094559_ukpxzx.jpg',
     alt: 'Memory 3',
     caption: 'Adventure Time',
     span: 'col-span-1 md:col-span-2 row-span-1',
