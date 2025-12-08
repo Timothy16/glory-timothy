@@ -122,7 +122,7 @@ const SeoHead = defineComponent({
         { name: 'geo.region', content: 'NG' },
         { name: 'geo.placename', content: 'Lagos' }
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+      link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
     })
   },
   render: () => null
