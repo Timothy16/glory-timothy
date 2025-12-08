@@ -36,7 +36,7 @@
 
       <!-- Story Content -->
       <div class="grid md:grid-cols-2 gap-8 sm:gap-12 mb-12 items-start">
-        <!-- First Story Card - Tim's Story -->
+        <!-- First Story Card - Tim's Story (UPDATED TEXT) -->
         <div 
           ref="card1Ref"
           class="group relative bg-white rounded-2xl p-8 sm:p-10 shadow-lg hover:shadow-2xl transition-all duration-700 border border-[#D4A574]/20"
@@ -60,12 +60,12 @@
             
             <!-- Story Content -->
             <div class="space-y-4">
-              <!-- Preview (always visible) -->
+              <!-- Preview (first paragraph - always visible) -->
               <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
-                On a beautiful Saturday morning, I saw a damsel in a wine-colored dress on the chief bridesmaid duty, while I was on groomsmen duty in my Agbada. I noticed the joy and happiness on her face.
+                On a beautiful Saturday morning, I saw a damsel in a wine-coloured dress doing her Chief Bridesmaid duty, while I was doing my Agbada groomsmen duty. I noticed the joy and happiness on her face. 
               </p>
               
-              <!-- Expanded Content - Fixed Height & Scrollable -->
+              <!-- Expanded Content - Fixed 400px Height & Scrollable -->
               <div 
                 class="overflow-hidden transition-all duration-500 ease-in-out"
                 :class="{ 'h-0': !card1Expanded, 'h-[400px]': card1Expanded }"
@@ -73,28 +73,28 @@
                 <div class="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-[#D4A574]/30 scrollbar-track-transparent pt-4 pr-2">
                   <div class="space-y-4">
                     <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
-                      I knew it was her elder sister's wedding and that she should be happy, but what I saw went beyond that moment. Instantly, something stirred in me, I knew I would have a part to play in her life, though I couldn't figure out exactly how at that moment.
+                     I knew it was her elder sister's wedding and that she should be happy, but what I saw went beyond that moment. Instantly, something stirred in me, I knew I would have a part to play in her life, though I couldn’t figure out exactly how at that moment.
                     </p>
                     <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
-                      Days, months, and some years went by, and the only thing I ever saw were her pictures on her sister's husband's status. I kept telling myself, "This is the one." I decided to learn more about this beauty, and I was told she is God-fearing, kind, intelligent, and full of joy. I said to myself, "I've found the one my heart desires."
+                      Days, weeks, and months went by, and the only thing I kept seeing were her pictures on her sister’s husband’s status who happened to be a friend and a brother. I kept telling myself, “This is the one.” I decided to learn more about her, and I was told different things; God-fearing, kind, intelligent, full of joy etc. I just said to myself, “I’ve found the one my heart desires.”
                     </p>
                     <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
-                      They spoke with her on my behalf, and we got connected. From our very first call, it felt as if we had known each other for years. The conversation flowed effortlessly, and from day one, I kept telling her, "I will be here for a very long time."
+                      They spoke with her on my behalf, and we got connected. From our very first call, it felt as if we had known each other for years. The conversation flowed effortlessly, and from day one, I kept telling her, “I will be here for a very long time.”
                     </p>
                     <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
-                      Our conversations grew stronger; every late-night call became a moment I looked forward to. The first time we met, I was nervous because she had never seen me in person before, though I had seen her. I was welcomed with a warm hug that I will never forget, even today, I still feel the peace that came with that embrace.
+                      Our conversations grew stronger; every late-night call became a moment I looked forward to. When she requested a meeting, I was nervous because she had never seen me in person before, though I had seen her. But I was welcomed with a warm hug that I haven't and will never forgot. Till today, I still feel the warmth and peace that came with that embrace.
                     </p>
                     <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
-                      Days turned into months, and months turned into years. Our love grew deeper, our connection strengthened, and I knew without a doubt that she was the woman I wanted to spend the rest of my life with.
+                      Days turned into months, and months turned into years. Our love grew deeper, our connection strengthened, and I knew without a doubt that she is the woman I wanted to spend the rest of my life with.
                     </p>
                     <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
-                      As time went on and our conversations deepened, I found clarity in the little moments, the laughter we shared, the values we aligned on, the prayers we prayed, and the quiet consistency of our bond. From that point on, the journey has been nothing short of beautiful.
+                      As time went on, our conversations deepened, I found clarity in the little moments; the laughter we shared, the values we aligned on, the prayers we prayed, and the quiet consistency of our bond. From that point on, the journey has been nothing short of beautiful.
                     </p>
                     <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
                       Her love reflects everything I ever hoped for, gentle in nature, strong in depth, steady in commitment, and full of understanding. She loves intentionally, with peace, sacrifice, grace, and sincerity.
                     </p>
                     <p class="text-base sm:text-lg leading-relaxed text-[#3C2A21]/80">
-                      I am marrying an extraordinary woman, thoughtful, compassionate, and beautiful inside and out, the one whose presence brings a sense of home, and the one God had written into my story long before I ever realized it. Together, this marks the beginning of our forever. ❤️
+                      I am getting married to an extraordinary woman, thoughtful, compassionate, and beautiful inside and out. The one whose presence brings a sense of home, and the one God had written into my story long before I ever realized it. Together, this marks the beginning of our forever. ❤
                     </p>
                   </div>
                 </div>
@@ -123,7 +123,7 @@
           <div class="absolute inset-0 bg-gradient-to-br from-[#D4A574]/5 to-[#C9A96E]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
         </div>
 
-        <!-- Second Story Card - Glory's Story -->
+        <!-- Second Story Card - Glory's Story (unchanged) -->
         <div 
           ref="card2Ref"
           class="group relative bg-white rounded-2xl p-8 sm:p-10 shadow-lg hover:shadow-2xl transition-all duration-700 border border-[#C9A96E]/20"
@@ -259,32 +259,25 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-// Refs for DOM elements
 const headerRef = ref(null)
 const card1Ref = ref(null)
 const card2Ref = ref(null)
 const timelineRef = ref(null)
 const quoteRef = ref(null)
 
-// Visibility states for scroll animations
 const headerVisible = ref(false)
 const card1Visible = ref(false)
 const card2Visible = ref(false)
 const timelineVisible = ref(false)
 const quoteVisible = ref(false)
 
-// Expanded states for story cards
 const card1Expanded = ref(false)
 const card2Expanded = ref(false)
 
-// Intersection Observer
 let observer = null
 
 const observeElements = () => {
-  const options = {
-    threshold: 0.2,
-    rootMargin: '0px 0px -100px 0px'
-  }
+  const options = { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
 
   observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -305,13 +298,8 @@ const observeElements = () => {
   if (quoteRef.value) observer.observe(quoteRef.value)
 }
 
-onMounted(() => {
-  observeElements()
-})
-
-onUnmounted(() => {
-  if (observer) observer.disconnect()
-})
+onMounted(() => observeElements())
+onUnmounted(() => observer?.disconnect())
 </script>
 
 <style scoped>
@@ -319,31 +307,15 @@ onUnmounted(() => {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
 }
-
 @keyframes float-delayed {
   0%, 100% { transform: translateY(0px) translateX(0px); }
   50% { transform: translateY(-15px) translateX(10px); }
 }
-
 .animate-float { animation: float 6s ease-in-out infinite; }
 .animate-float-delayed { animation: float-delayed 8s ease-in-out infinite; }
 
-/* Custom scrollbar - works in Webkit browsers (Chrome, Safari, Edge) */
-.scrollbar-thin::-webkit-scrollbar {
-  width: 6px;
-}
-
-.scrollbar-thin::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.scrollbar-thin::-webkit-scrollbar-thumb {
-  background-color: currentColor;
-  border-radius: 3px;
-  opacity: 0.3;
-}
-
-.scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  opacity: 0.5;
-}
+.scrollbar-thin::-webkit-scrollbar { width: 6px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background-color: currentColor; border-radius: 3px; opacity: 0.3; }
+.scrollbar-thin::-webkit-scrollbar-thumb:hover { opacity: 0.5; }
 </style>
