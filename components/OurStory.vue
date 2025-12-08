@@ -240,7 +240,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
           <p class="text-2xl sm:text-3xl md:text-4xl font-light text-[#3C2A21] italic leading-relaxed">
             "He came softly, but his sincerity echoed loudly in my spirit."
-            <span class="block mt-3 text-base sm:text-lg not-italic font-medium text-[#3C2A21]">
+            <span class="block md:text-right mt-3 text-base sm:text-lg not-italic font-medium text-[#3C2A21]">
               — Glory
             </span>
           </p>
