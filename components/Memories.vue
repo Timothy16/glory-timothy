@@ -26,10 +26,10 @@
         </div>
         
         <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-3 tracking-wide">
-          Notable Memories
+          Snapshots From Our Journey
         </h2>
         <p class="text-lg sm:text-xl text-[#D4A574] italic font-light tracking-wider">
-          Moments that made our journey beautiful
+          Each moment a chapter in the story we’re still writing
         </p>
       </div>
 
