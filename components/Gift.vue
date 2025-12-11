@@ -300,7 +300,7 @@ const wishlistItems = [
     id: 1,
     name: 'Hisense 9kg Top Loader Automatic Washing Machine',
     category: 'Home Appliances',
-    link: 'https://www.jumia.com.ng/hisense-9kg-top-loader-automatic-washing-machine-washspin-418986113.html?utm_medium=social&utm_campaign=pdpshare-apps',
+    link: 'https://www.jumia.com.ng/hisense-9kg-top-loader-automatic-washing-machine-washspin-406364058.html?utm_medium=social&utm_campaign=pdpshare-apps',
     icon: (props) => h('svg', { ...props, fill: 'currentColor', viewBox: '0 0 20 20' }, [
       h('path', { 'fill-rule': 'evenodd', d: 'M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 1a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm4-4a1 1 0 100 2h.01a1 1 0 100-2H13zM9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM7 8a1 1 0 000 2h.01a1 1 0 000-2H7z', 'clip-rule': 'evenodd' })
     ])
@@ -338,7 +338,7 @@ const wishlistItems = [
     id: 5,
     name: 'Tornado Non-Stick Pots & Fry Pan Set',
     category: 'Kitchen Essentials',
-    link: 'https://www.jumia.com.ng/generic-tornado-high-quality-non-stick-pots-fry-pan-412490861.html',
+    link: 'https://www.jumia.com.ng/high-quality-non-stick-cooking-pot-with-fry-pan-tornado-mpg3768073.html?utm_medium=social&utm_campaign=pdpshare-apps',
     icon: (props) => h('svg', { ...props, fill: 'currentColor', viewBox: '0 0 20 20' }, [
       h('path', { d: 'M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z' }),
       h('path', { d: 'M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z' }),
